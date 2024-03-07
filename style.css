@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+}
+
+body {
+    background: -webkit-linear-gradient(
+    to right,
+    #e1f5c4,
+    #ede574
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e1f5c4,
+    #ede574
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.city-card {
+  background-color: white;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.time {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #a1a1a1;
+    font-size: 70%;
+}
+
+.weather {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather-icon {
+    height: 110px;
+}
