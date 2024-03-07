@@ -52,27 +52,7 @@ function getCurrentTime() {
     return formattedTime;
 }
 
-async function test() {
-  const url = 'https://map-places.p.rapidapi.com/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=1500&keyword=cruise&type=restaurant';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '6deac19c98msh693a20409929614p1802bcjsn3cbe9dc936f4',
-		'X-RapidAPI-Host': 'map-places.p.rapidapi.com'
-	}
-};
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
-}
-
 setTimeout(() => {
   fetchWeather()
 }, 1500);
 
-test();
