@@ -9,29 +9,21 @@ const weatherImageNode = document.getElementById('weatherIcon');
 const timeNode = document.getElementById('time');
 
 async function fetchWeather() {
-  // const resGeo = await fetch(
-  //   "https://get.geojs.io/v1/ip/geo.json"
-  // );
-  // const dataGeo = await resGeo.json();
-  // const {latitude, longitude, city, country} = dataGeo;
+  const resGeo = await fetch(
+    "https://get.geojs.io/v1/ip/geo.json"
+  );
+  const dataGeo = await resGeo.json();
+  const {latitude, longitude, city, country} = dataGeo;
 
-  // const resWeather = await fetch(
-  //   `https://api.weatherapi.com/v1/current.json?key=13974d32ad974aa1871200231240603&q=${latitude},${longitude}&aqi=no`
-  // );
-  // const dataWeather = await resWeather.json();
-  // console.log(dataWeather);
-  // const {temp_c, wind_kph, condition} = dataWeather.current;
-  // const {text, icon} = condition;
+  const resWeather = await fetch(
+    `https://api.weatherapi.com/v1/current.json?key=13974d32ad974aa1871200231240603&q=${latitude},${longitude}&aqi=no`
+  );
+  const dataWeather = await resWeather.json();
+  const {temp_c, wind_kph, condition} = dataWeather.current;
+  const {text, icon} = condition;
 
   loaderNode.style.display = "none";
   cityCardNode.style.display = "block";
-
-  country = 'Germany';
-  city = 'Plauen';
-  temp_c = 2;
-  wind_kph = 13;
-  text = 'Partly cloudy';
-  icon = 'http://cdn.weatherapi.com/weather/64x64/day/116.png';
 
   timeNode.textContent = getCurrentTime();
   countryNode.textContent = country;
