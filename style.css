@@ -3,30 +3,42 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 1.1em;
+  font-size: 25px;
 }
 
-body {
-    background: -webkit-linear-gradient(
-    to right,
-    #e1f5c4,
-    #ede574
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #e1f5c4,
-    #ede574
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  min-height: 100vh;
 }
+
+.header {
+  background-color: #013a63;
+  min-height: 90px;
+  padding: 35px;
+  position: fixed;
+  position: sticky;
+  top: 0px;
+}
+
+.main {
+  background: #ffd89b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex: 1;
+}
+
 
 .city-card {
   background-color: white;
   max-width: 600px;
-  margin: 20px auto;
-  border: 2px solid black;
+  margin: 100px auto;
+  border: 2px solid #003554;
   padding: 20px;
   border-radius: 15px;
   position: relative;
+  display: none;
 }
 
 .time {
@@ -45,4 +57,9 @@ body {
 
 .weather-icon {
     height: 110px;
+}
+
+.footer {
+  background-color: #013a63;
+  height: 60px;
 }

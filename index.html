@@ -12,21 +12,35 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loader.css" />
     <script src="script.js" defer></script>
     <title>Weather App</title>
   </head>
   <body>
-    <div class="city-card">
-      <div class="time" id="time"></div>  
-      <p>City: <span id="city"></span>, <span id="country"></span></p>
-      <div class="weather">
-        <img id="weatherIcon" class="weather-icon" />
-        <div>
-          <p>Temperature: <span id="temperature"></span></p>
-          <p>Wind speed: <span id="windSpeed"></span></p>
-          <p>Weather: <span id="weatherDescription"></span></p>
+    <div class="container-wrapper">
+      <header class="header"></header>
+      <main class="main" id="main">
+        <div class="loader" id="loader">
+          <div class="icon sunny">
+            <div class="sun">
+              <div class="rays"></div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="city-card" id="cityCard">
+          <div class="time" id="time"></div>
+          <p>City: <span id="city"></span>, <span id="country"></span></p>
+          <div class="weather">
+            <img id="weatherIcon" class="weather-icon" />
+            <div>
+              <p>Temperature: <span id="temperature"></span></p>
+              <p>Wind speed: <span id="windSpeed"></span></p>
+              <p>Weather: <span id="weatherDescription"></span></p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
     </div>
   </body>
 </html>
